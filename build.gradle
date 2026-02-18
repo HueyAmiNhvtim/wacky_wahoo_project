@@ -18,10 +18,21 @@ repositories {
 	mavenCentral()
 }
 
+// Oh, so this is where they download the libraries. That's cool.
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation("org.postgresql:postgresql:42.7.10") // The Postgresql driver so that Java JDBC can actually work.
+	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-jdbc-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+// Explicit configuration for running the SpringBoot application
+tasks.named('bootRun') {
+	mainClass = 'com.firstattempt.controller.Application'
 }
 
 tasks.named('test') {
