@@ -15,7 +15,7 @@ public class HelloController {
     /*
     maps "/" to the index() method. wut.
     */
-    @GetMapping("/")
+    @GetMapping("/yahoo")
     public String index() {
         return "Henlo. Za Warudo is a kut-ta.\n";
     }
