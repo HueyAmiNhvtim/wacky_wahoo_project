@@ -39,21 +39,21 @@ public class PostController {
 
     @PostMapping
     public ResponseEntity<String> createPost() {
-        return createPostService.execute();
+        return createPostService.execute(null);
     }
 
     @GetMapping
     public ResponseEntity<String> getPost() {
-        return getPostService.execute();
+        return getPostService.execute(null);
     }
 
     @PutMapping
     public ResponseEntity<String> putPost() {
-        return putPostService.execute();
+        return putPostService.execute(null);
     }
 
     @DeleteMapping
     public ResponseEntity<String> delPost() {
-        return delPostService.execute();
+        return delPostService.execute(null);
     }
 }
