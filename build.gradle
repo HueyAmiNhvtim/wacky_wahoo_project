@@ -32,7 +32,7 @@ dependencies {
 
 // Explicit configuration for running the SpringBoot application
 tasks.named('bootRun') {
-	mainClass = 'com.firstattempt.controller.Application'
+	mainClass = 'com.firstattempt.wack.Application'
 }
 
 tasks.named('test') {

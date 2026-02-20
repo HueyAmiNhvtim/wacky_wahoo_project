@@ -1,4 +1,4 @@
-package com.firstattempt.controller;
+package com.firstattempt.wack;
 
 import java.util.Arrays;
 

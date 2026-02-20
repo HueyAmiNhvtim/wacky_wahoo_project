@@ -1,4 +1,4 @@
-package com.firstattempt.controller;
+package com.firstattempt.wack;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
