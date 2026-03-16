@@ -1,4 +1,4 @@
-package com.firstattempt.wack.post;
+package com.firstattempt.wack.post.services;
 
 import com.firstattempt.wack.Command;
 import org.springframework.http.HttpStatus;

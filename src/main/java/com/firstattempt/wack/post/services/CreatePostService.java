@@ -1,4 +1,4 @@
-package com.firstattempt.wack.post;
+package com.firstattempt.wack.post.services;
 
 import com.firstattempt.wack.Command;
 import org.springframework.http.HttpStatus;
@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeletePostService implements Command<Void, String> {
+public class CreatePostService implements Command<Void, String> {
     @Override
     public ResponseEntity<String> execute(Void input) {
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Product deleted");
+        return ResponseEntity.status(HttpStatus.CREATED).body("Post created");
     }
 }
