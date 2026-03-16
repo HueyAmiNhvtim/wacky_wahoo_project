@@ -13,7 +13,7 @@ RestController: Denote that the class can be used by Spring MVC to handle web re
 public class HelloController {
     
     /*
-    maps "/" to the index() method. wut.
+    maps "/yahoo" to the index() method. wut.
     */
     @GetMapping("/yahoo")
     public String index() {
