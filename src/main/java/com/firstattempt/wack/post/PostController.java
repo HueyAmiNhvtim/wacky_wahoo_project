@@ -1,5 +1,6 @@
 package com.firstattempt.wack.post;
 
+import com.firstattempt.wack.post.model.Post;
 import com.firstattempt.wack.post.services.CreatePostService;
 import com.firstattempt.wack.post.services.DeletePostService;
 import com.firstattempt.wack.post.services.GetPostService;
@@ -7,6 +8,8 @@ import com.firstattempt.wack.post.services.PutPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -45,7 +48,7 @@ public class PostController {
     }
 
     @GetMapping
-    public ResponseEntity<String> getPost() {
+    public ResponseEntity<List<Post>> getPost() {
         return getPostService.execute(null);
     }
 
