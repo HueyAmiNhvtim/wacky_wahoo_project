@@ -8,10 +8,9 @@ import jakarta.persistence.*;
 public class Post {
     // A Post should have the following characteristics:
     // a link to the image.
-    // Number of upvotes
-    // Number of downvotes
+    // Number of votes
     // Description of the whole thing.
-    // For now, integer ID.
+    // Title too.
     private Long id;
     private String title;
     private String imageurl;
