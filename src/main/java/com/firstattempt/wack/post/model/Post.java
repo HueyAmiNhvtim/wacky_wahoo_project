@@ -2,6 +2,8 @@ package com.firstattempt.wack.post.model;
 
 import jakarta.persistence.*;
 
+import java.sql.Date;
+
 
 @Entity // Maps Java class to SQL
 @Table(name = "posts")
@@ -16,6 +18,7 @@ public class Post {
     private String imageurl;
     private String description;
     private Integer votes;
+    private Date postingDate;
 
     @Id // Primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto-increments the id
@@ -56,11 +59,14 @@ public class Post {
     }
 
     @Column(name = "votes")
-    public Integer getVotes() {
-        return this.votes;
-    }
+    public Integer getVotes() {return this.votes;}
 
     public void setVotes(Integer votes) {
         this.votes = votes;
     }
+
+    @Column(name="postingdate")
+    public Date getDate() {return this.postingDate;};
+
+    public void setDate(Date date) {this.postingDate = date;}
 }
