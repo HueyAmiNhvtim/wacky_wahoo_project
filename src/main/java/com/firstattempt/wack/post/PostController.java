@@ -3,7 +3,7 @@ package com.firstattempt.wack.post;
 import com.firstattempt.wack.post.model.Post;
 import com.firstattempt.wack.post.services.CreatePostService;
 import com.firstattempt.wack.post.services.DeletePostService;
-import com.firstattempt.wack.post.services.GetPostService;
+import com.firstattempt.wack.post.services.GetPostsService;
 import com.firstattempt.wack.post.services.PutPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,17 +27,17 @@ public class PostController {
     * will be determined as the "tiebreaker" for finding the exact implementation's class name!
     * */
     private final CreatePostService createPostService;
-    private final GetPostService getPostService;
+    private final GetPostsService getPostsService;
     private final PutPostService putPostService;
     private final DeletePostService delPostService;
 
     @Autowired
     public PostController(CreatePostService createPostService,
-                          GetPostService getPostService,
+                          GetPostsService getPostService,
                           PutPostService putPostService,
                           DeletePostService delPostService) {
         this.createPostService = createPostService;
-        this.getPostService = getPostService;
+        this.getPostsService = getPostService;
         this.putPostService = putPostService;
         this.delPostService = delPostService;
     }
@@ -48,8 +48,8 @@ public class PostController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Post>> getPost() {
-        return getPostService.execute(null);
+    public ResponseEntity<List<Post>> getPosts() {
+        return getPostsService.execute(null);
     }
 
     @PutMapping

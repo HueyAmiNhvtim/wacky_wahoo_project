@@ -11,12 +11,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class GetPostService implements Query<Void, List<Post>> {
+public class GetPostsService implements Query<Void, List<Post>> {
 
     private final PostRepository postRepository;
 
     @Autowired // Dependency injection!
-    public GetPostService(PostRepository postRepository) {
+    public GetPostsService(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 
